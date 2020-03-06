@@ -7,6 +7,7 @@ namespace Validator
     {
         static void Main(string[] args)
         {
+            // first instruction set complete
             Console.WriteLine("Please enter a numeric pin between 4 and 8 characters");
             var testPin = Console.ReadLine();
 
