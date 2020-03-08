@@ -23,16 +23,19 @@ namespace Validator
             // }
 
             //second test begins here - phone number - WIP
-            //Console.WriteLine("Please enter a 10-digit phone number. You may include spaces, dashes, and parentheses.");
-            //var phoneNumber = Console.ReadLine();
-            //int phoneWithoutLetters;
-            //var phoneCharacters = phoneNumber.ToCharArray();
-            
-            //foreach (char ch in phoneCharacters)
-            //{
-            //    Console.WriteLine(ch);
-            //    Console.ReadLine();
-            //}
+            Console.WriteLine("Please enter a 10-digit phone number. You may include spaces, dashes, and parentheses.");
+            var phoneNumber = Console.ReadLine();
+            phoneNumber = phoneNumber.Replace("-", String.Empty).Replace(" ", String.Empty).Replace("(", String.Empty).Replace(")", String.Empty);
+
+            if (Regex.IsMatch(phoneNumber, @"^[a-zA-Z]*$"))
+            {
+                Console.WriteLine("No letters allowed. Try again!");
+                Console.ReadLine();
+            }
+
+            Console.WriteLine(phoneNumber);
+            Console.ReadLine();
+
 
             //if (Char.IsLetter(phoneCharacters))
             //{
@@ -49,6 +52,8 @@ namespace Validator
             //    Console.WriteLine("Something doesn't match.");
             //    Console.ReadLine();
             //}
+
+
 
             // Power Rangers - complete. you have to account for spaces and lower/upper so unify the string that comes in.
             Console.WriteLine("In order to gain access to the Command Center, you must enter your first and last name.");
