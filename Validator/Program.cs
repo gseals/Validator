@@ -8,19 +8,19 @@ namespace Validator
         static void Main(string[] args)
         {
             // pin number - complete.
-            // Console.WriteLine("Please enter a numeric pin between 4 and 8 characters");
-            // var testPin = Console.ReadLine();
+            Console.WriteLine("Please enter a numeric pin between 4 and 8 characters");
+            var testPin = Console.ReadLine();
 
-            // if (testPin.Length > 3 && testPin.Length < 9 && Regex.IsMatch(testPin, @"^\d+$"))
-            // {
-            //    Console.WriteLine(true);
-            //    Console.ReadLine();
-            // }
-            // else if (testPin.Length <= 3 || testPin.Length >= 9 || Regex.IsMatch(testPin, @"^[A-Za-z]+$"))
-            // {
-            //    Console.WriteLine("Something's not right");
-            //    Console.ReadLine();
-            // }
+            if (testPin.Length > 3 && testPin.Length < 9 && Regex.IsMatch(testPin, @"^\d+$"))
+             {
+                Console.WriteLine(true);
+                Console.ReadLine();
+             }
+             else if (testPin.Length <= 3 || testPin.Length >= 9 || Regex.IsMatch(testPin, @"^[A-Za-z]+$"))
+             {
+                Console.WriteLine("Something's not right");
+                Console.ReadLine();
+             }
 
             //second test begins here - phone number - WIP
             Console.WriteLine("Please enter a 10-digit phone number. You may include spaces, dashes, and parentheses.");
@@ -36,24 +36,7 @@ namespace Validator
             Console.WriteLine(phoneNumber);
             Console.ReadLine();
 
-
-            //if (Char.IsLetter(phoneCharacters))
-            //{
-            //    Console.WriteLine("There are letters in this sequence");
-            //    Console.ReadLine();
-            //}
-            //else if (Regex.IsMatch(phoneNumber, @"^[0-9]{10}$") && phoneNumber.IndexOf("555") == -1)
-            //{
-            //    Console.WriteLine("That's a fine looking phone number you got there.");
-            //    Console.ReadLine();
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Something doesn't match.");
-            //    Console.ReadLine();
-            //}
-
-
+            // email address
 
             // Power Rangers - complete. you have to account for spaces and lower/upper so unify the string that comes in.
             Console.WriteLine("In order to gain access to the Command Center, you must enter your first and last name.");
@@ -92,6 +75,11 @@ namespace Validator
                     Console.ReadLine();
                     break;
             }
+
+            // mocking
+
+            // palindrome
+
         }
     }
 }
